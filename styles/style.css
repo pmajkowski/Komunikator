@@ -1,0 +1,109 @@
+body {
+    font-family: sans-serif;
+    background: black;
+    color: white;
+    margin: 0;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.main-nav li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+svg {
+    max-width: 40px;
+    max-height: 40px;
+}
+
+svg path {
+    fill: white;
+}
+
+.top-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.top-nav svg path {
+    fill: aquamarine;
+}
+.top-nav .avatar {
+    width: 40px;
+    height: 40px;
+}
+.avatar {
+    border-radius: 50px;
+}
+.conversation-search {
+    border: none;
+    padding: 10px;
+    background: rgb(100, 100, 100);
+    border-radius: 20px;
+    margin-bottom: 20px;
+    color: white;
+    outline-color: aquamarine;
+}
+.conversation-search::placeholder {
+    color: white;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    padding-bottom: 80px;
+}
+.conversations {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.conversations .avatar {
+    width: 70px;
+    margin-right: 20px;
+}
+.conversations li {
+    display: flex;
+    margin-bottom: 20px;
+}
+.conversations .msg-wrapper {
+   display: flex;
+   flex-direction: column; 
+   justify-content: center;
+}
+.top-nav, .main-nav {
+    background: rgb(36, 36, 36, 0.5);
+    /* Nie wiem czemu blur nie działa */
+    backdrop-filter: blur(30px);
+}
+.conversations.featured {
+    flex-direction: row;
+    overflow: scroll;
+}
+.conversations.featured li{
+    flex-direction: column;
+}
+.conversations.featured .avatar {
+    margin-bottom: 10px;
+}
